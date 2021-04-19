@@ -1,13 +1,13 @@
 import math
 import json
+import os
 from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def login():
-# 	data = request.json
-# 	return render_template("login.html"), data
+@app.route("/")
+def login():
+	return render_template("test.html")
 
 # ### Can delete this block after JSON is fed in ###
 # file = "templates/dj.json"
@@ -48,4 +48,5 @@ def home():
 # 	return render_template("patient.html", data=data[int(num)])
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	port = int(os.environ.get('PORT', 33507))
+	app.run(host="0.0.0.0", port=port)
