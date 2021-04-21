@@ -38,6 +38,11 @@
       <td>{{data[p]._id}}</td>
       <td>{{data[p].name}}</td>
       <td>{{data[p].status}}</td>
+      {% if j[p] > 1: %}
+        <td>{{data[p].measurements[j[p]-1].dateTime[4:15]}}</td>
+      {% else %}
+        <td>No Measurements</td>
+      {% endif %}
     </tr>
   {% endfor %}
   </tbody>
