@@ -15,46 +15,46 @@
 </style>
 
 <body>
-	<h1>{{id[1]}}</h1>
+	<h1>{{data.name}}</h1>
 	<p>Here is a paragraph to display some background.</p>
 	<table>
 		<caption><b>Patient Information</b></caption>
 		<tbody>
 			<tr>
 				<th><b>Patient ID</b></th>
-				<th>{{id[0]}}</th>
+				<th>{{data._id}}</th>
 			</tr>
 			<tr>
 				<td><b>Full Name</b></td>
-				<td>{{id[1]}}</td>
+				<td>{{data.name}}</td>
 			</tr>
 			<tr>
 				<td><b>Address</b></td>
-				<td>{{id[2]}}</td>
+				<td>{{data.address}}</td>
 			</tr>
 			<tr>
 				<td><b>Phone Number</b></td>
-				<td>{{id[3]}}</td>
+				<td>{{data.phone}}</td>
 			</tr>
 			<tr>
 				<td><b>Birthdate</b></td>
-				<td>{{id[4]}}</td>
+				<td>{{data.birthdate}}</td>
 			</tr>
 			<tr>
 				<td><b>Gender</b></td>
-				<td>{{id[6]}}</td>
+				<td>{{data.gender}}</td>
 			</tr>
 			<tr>
 				<td><b>Marital Status</b></td>
-				<td>{{id[7]}}</td>
+				<td>{{data.martialStatus}}</td>
 			</tr>
 			<tr>
 				<td><b>Race</b></td>
-				<td>{{id[8]}}</td>
+				<td>{{data.race}}</td>
 			</tr>
 			<tr>
 				<td><b>Status</b></td>
-				<td>{{id[5]}}</td>
+				<td>{{data.status}}</td>
 			</tr>
 		</tbody>
 	</table>

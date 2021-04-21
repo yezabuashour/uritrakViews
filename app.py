@@ -43,9 +43,12 @@ def home():
 	data = dataManip(data)
 	return render_template("index.html", data=data[0], l=data[1], j=data[2])
 
-# @app.route("/patient/<num>")
-# def id_page(num):
-# 	return render_template("patient.html", data=data[int(num)])
+@app.route("/patient/<num>")
+def id_page(num):
+	data = request.data
+	data = data.decode("utf-8")
+	data = json.loads(data)
+	return render_template("patient.html", data=data)
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 33507))
