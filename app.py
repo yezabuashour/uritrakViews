@@ -16,9 +16,9 @@ def login():
 # 	data = json.loads(f.read())
 # ### Can delete this block after JSON is fed in ###
 
-def sortFunction(value):
-	return value['name']
-
+# def sortFunction(value):
+# 	return value.name
+# data = sorted(data, key=sortFunction)
 
 
 def dataManip(data):
