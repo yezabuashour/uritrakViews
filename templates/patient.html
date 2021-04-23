@@ -60,7 +60,104 @@
 	</table>
 
 <script>
-	var cl_data = {{ data }};
+	{% if data.measurements|length == 0 %}
+		document.getElementById("spot").innerHTML = "No Measurements Detected!";
+	{% endif %}
+	{% if data.measurements|length == 1 %}
+		var y = [
+		         {{data.measurements[0].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 2 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 3 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 4 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 5 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 6 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}},
+		         {{data.measurements[5].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 7 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}},
+		         {{data.measurements[5].chloride}},
+		         {{data.measurements[6].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 8 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}},
+		         {{data.measurements[5].chloride}},
+		         {{data.measurements[6].chloride}},
+		         {{data.measurements[7].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 9 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}},
+		         {{data.measurements[5].chloride}},
+		         {{data.measurements[6].chloride}},
+		         {{data.measurements[7].chloride}},
+		         {{data.measurements[8].chloride}}
+		        ];
+	{% endif %}
+	{% if data.measurements|length == 10 %}
+		var y = [
+		         {{data.measurements[0].chloride}},
+		         {{data.measurements[1].chloride}},
+		         {{data.measurements[2].chloride}},
+		         {{data.measurements[3].chloride}},
+		         {{data.measurements[4].chloride}},
+		         {{data.measurements[5].chloride}},
+		         {{data.measurements[6].chloride}},
+		         {{data.measurements[7].chloride}},
+		         {{data.measurements[8].chloride}},
+		         {{data.measurements[9].chloride}}
+		        ];
+	{% endif %}
 
 	window.onload = function () {
 
